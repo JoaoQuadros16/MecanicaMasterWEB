@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Clientes - MecanicaMaster</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+  <div class="layout">
+
+    <aside class="sidebar">
+      <div class="marca">
+        <span class="icone">🔧</span>
+        <h2>MecanicaMaster</h2>
+      </div>
+      <nav>
+        <a href="../index.html"><span class="icone">🏠</span> Início</a>
+        <a href="clientes.html" class="ativo"><span class="icone">👥</span> Clientes</a>
+      </nav>
+    </aside>
+
+    <main class="conteudo">
+      <h1>Clientes</h1>
+      <p class="subtitulo">Cadastre e gerencie os clientes da oficina.</p>
+
+      <div class="card">
+        <h2>Novo cliente</h2>
+        <form id="form-cliente">
+          <div class="linha-form">
+            <div class="campo">
+              <label for="nome">Nome</label>
+              <input type="text" id="nome" placeholder="Nome completo" required>
+            </div>
+            <div class="campo">
+              <label for="telefone">Telefone</label>
+              <input type="tel" id="telefone" placeholder="(00) 00000-0000" required>
+            </div>
+          </div>
+          <div class="campo">
+            <label for="email">Email</label>
+            <input type="email" id="email" placeholder="email@exemplo.com">
+          </div>
+          <button type="submit" class="btn-primario">Adicionar cliente</button>
+        </form>
+      </div>
+
+      <div class="card">
+        <h2>Clientes cadastrados</h2>
+        <ul id="lista-clientes"></ul>
+      </div>
+    </main>
+
+  </div>
+
+  <script src="../js/api/clientesApi.js"></script>
+  <script src="../js/clientes.js"></script>
+</body>
+</html>
